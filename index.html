@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="iGbcfhkSJAe4cD_pK-h6EN76CEOML0UZepeNSQ1M43I" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="The American Periphenomenal Survey (Cascadia Archive) is an independent research initiative systematically documenting anomalous human experiences in the Pacific Northwest (WA, OR, ID, BC, AK, NorCal).">
+
+    <meta name="keywords" content="Cascadia, Folklore, High Strangeness, Pacific Northwest, Liminal Spaces, APS, Periphenomenal, Sasquatch, UAP">
+
+    <meta name="author" content="APS Research Collective: Cascadia">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="geo.region" content="US-WA" />
+    <meta name="geo.placename" content="Cascadia Bioregion" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="APS Cascadia: Report an Anomaly">
+    <meta property="og:description" content="Secure, anonymous reporting for unexplained phenomena in the Pacific Northwest. Help us map the unknown.">
+    <meta property="og:image" content="media/aps_cascadia_logo.svg">
+    <meta property="og:url" content="https://www.aps-project.org/">
+
+    <title>🧭 American Periphenomenal Survey: Cascadia Archive</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
+
+    <style>
+        /* APS STANDARD STYLESHEET (v4.0) */
+        @font-face {
+            font-family: 'NationalPark';
+            src: url('media/NationalPark-VariableVF.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --forest-green: #20441A;
+            --federal-gold: #D4AF37;
+            --canvas-cream: #F4EFE1;
+            --alert-red: #8B0000;
+        }
+
+        body {
+            background-color: var(--canvas-cream);
+            font-family: 'Courier New', Courier, monospace;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border: 2px solid var(--forest-green);
+            box-shadow: 10px 10px 0px rgba(32, 68, 26, 0.2);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 4px double var(--forest-green);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        h1 {
+            font-family: 'NationalPark', sans-serif;
+            color: var(--forest-green);
+            font-size: 2.2rem;
+            margin: 10px 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-family: 'NationalPark', sans-serif;
+            font-size: 1.4rem;
+            color: #555;
+            margin-top: 0;
+            border-top: 1px solid #ccc;
+            display: inline-block;
+            padding-top: 5px;
+        }
+
+        /* Section headings within the form */
+        .form-section-heading {
+            font-family: 'NationalPark', sans-serif;
+            color: #fff;
+            background: var(--forest-green);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            margin: 30px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid var(--forest-green);
+        }
+
+        label {
+            display: block;
+            font-family: 'NationalPark', sans-serif;
+            font-size: 1.2rem;
+            color: var(--forest-green);
+            margin-bottom: 5px;
+        }
+
+        .sub-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        /* Consent radio group — visually distinguished */
+        .consent-group {
+            border-left: 5px solid var(--federal-gold);
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .radio-option input {
+            margin-top: 5px;
+        }
+
+        /* Checkbox grid for strangeness indicators */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .checkbox-grid > div {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .checkbox-grid input[type="checkbox"] {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .checkbox-grid label {
+            display: inline;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+            margin: 0;
+        }
+
+        .checkbox-grid label em {
+            color: #666;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        /* Honeypot — visually hidden from humans, visible to naive bots */
+        .honeypot {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        button.submit-btn {
+            background-color: var(--forest-green);
+            color: white;
+            font-family: 'NationalPark', sans-serif;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button.submit-btn:hover {
+            background-color: #152e11;
+        }
+
+        button.submit-btn:disabled {
+            background-color: #888;
+            cursor: not-allowed;
+        }
+
+        /* Status messages */
+        #status-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        #status-message.success {
+            background: #e8f3e0;
+            color: var(--forest-green);
+            border: 1px solid var(--forest-green);
+        }
+
+        #status-message.error {
+            background: #fce4e4;
+            color: var(--alert-red);
+            border: 1px solid var(--alert-red);
+        }
+
+        #status-message.pending {
+            color: var(--forest-green);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #777;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+
+        footer a {
+            color: var(--forest-green);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .required { color: var(--alert-red); }
+
+        .optional-note {
+            font-size: 0.8rem;
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="media/aps_cascadia_logo.svg" alt="APS Cascadia Archive Patch" class="logo">
+        <h1>American Periphenomenal Survey</h1>
+        <h2>🌲 CASCADIA ARCHIVE 🌲</h2>
+    </header>
+
+    <div style="text-align: center; margin: 20px 0; padding-bottom: 20px; border-bottom: 1px solid #ccc;">
+        <a href="registry.html" style="font-family: 'Courier New', monospace; text-decoration: none; color: #1a1a1a; border: 2px solid #1a1a1a; padding: 8px 12px; font-weight: bold; font-size: 0.9rem; background-color: #fff;">
+            [ 📂 VIEW PUBLIC ARCHIVE ]
+        </a>
+    </div>
+
+    <div class="warning-box">
+        <strong>PROJECT SCOPE:</strong> This registry is an independent research initiative established for the documentation of anomalous experiences within the Cascadia Bioregion. Participation is voluntary, and your identity is protected. Skip anything you would rather not answer.
+    </div>
+
+    <form id="aps-form" novalidate>
+
+        <!-- Honeypot: hidden from humans, filled by naive bots. Apps Script drops any submission where this is non-empty. -->
+        <div class="honeypot" aria-hidden="true">
+            <label for="website_url">Website (leave blank)</label>
+            <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+        </div>
+
+        <h3 class="form-section-heading">Part 1 — About You</h3>
+
+        <div class="form-group">
+            <label for="age_group">1. Age Group <span class="required">*</span></label>
+            <select id="age_group" name="age_group" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="18-25">18 - 25</option>
+                <option value="26-35">26 - 35</option>
+                <option value="36-45">36 - 45</option>
+                <option value="46-55">46 - 55</option>
+                <option value="56-65">56 - 65</option>
+                <option value="66+">66+</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">2. Gender Identity</label>
+            <input type="text" id="gender" name="gender" placeholder="e.g., Male, Female, Non-Binary, Prefer not to say">
+        </div>
+
+        <div class="form-group">
+            <label for="occupation">3. Occupation</label>
+            <p class="sub-label">What is your primary area of work? (e.g., forestry, tech, service, retired)</p>
+            <input type="text" id="occupation" name="occupation">
+        </div>
+
+        <div class="form-group">
+            <label for="cultural_bg">4. Cultural or Spiritual Background</label>
+            <p class="sub-label">e.g., Catholic, Indigenous, Agnostic, Secular</p>
+            <input type="text" id="cultural_bg" name="cultural_bg">
+        </div>
+
+        <h3 class="form-section-heading">Part 2 — The Event</h3>
+
+        <div class="form-group">
+            <label for="location_state">5. Where did it happen? (jurisdiction) <span class="required">*</span></label>
+            <select id="location_state" name="location_state" required>
+                <option value="" disabled selected>-- Select Jurisdiction --</option>
+                <option value="WA">Washington</option>
+                <option value="OR">Oregon</option>
+                <option value="ID">Idaho (North)</option>
+                <option value="BC">British Columbia</option>
+                <option value="AK_SE">Alaska (Southeast)</option>
+                <option value="NORCAL_JEFF">Northern California</option>
+                <option value="OTHER">Other (Transfer to National)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="location_specific">6. Specific Location</label>
+            <p class="sub-label">Landmarks, mile markers, trail names, neighborhood — e.g., "Olympic National Forest, near the Hoh River trail" or "Downtown Seattle, 3rd & Pike"</p>
+            <input type="text" id="location_specific" name="location_specific">
+        </div>
+
+        <div class="form-group">
+            <label for="witness_status">7. Were you alone?</label>
+            <select id="witness_status" name="witness_status">
+                <option value="" disabled selected>Select...</option>
+                <option value="ALONE">I was alone</option>
+                <option value="WITNESS_1">I was with 1 other person</option>
+                <option value="WITNESS_GROUP">I was with a group</option>
+                <option value="UNCERTAIN">Uncertain / Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>8. Did you experience any of the following? <span class="optional-note">(Check all that apply)</span></label>
+            <p class="sub-label">Don't overthink these — mark what stood out. You'll describe the details below.</p>
+
+            <div class="checkbox-grid">
+                <div>
+                    <input type="checkbox" id="oz_factor_flag" name="oz_factor_flag" value="YES">
+                    <label for="oz_factor_flag"><strong>Unnatural silence</strong> <em>(ambient sound dropped out)</em></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_hum" name="phenom_hum" value="YES">
+                    <label for="phenom_hum"><strong>Low-frequency hum</strong> <em>(vibration, no clear source)</em></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_time" name="phenom_time" value="YES">
+                    <label for="phenom_time"><strong>Missing time</strong> <em>(unaccounted lapse)</em></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_nausea" name="phenom_nausea" value="YES">
+                    <label for="phenom_nausea"><strong>Nausea, vertigo, or headache</strong></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_paralysis" name="phenom_paralysis" value="YES">
+                    <label for="phenom_paralysis"><strong>Paralysis</strong> <em>(unable to move)</em></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_tech" name="phenom_tech" value="YES">
+                    <label for="phenom_tech"><strong>Device or tech issues</strong> <em>(battery drain, glitches, interference)</em></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_ozone" name="phenom_ozone" value="YES">
+                    <label for="phenom_ozone"><strong>Ozone or sulfur smell</strong></label>
+                </div>
+                <div>
+                    <input type="checkbox" id="phenom_fear" name="phenom_fear" value="YES">
+                    <label for="phenom_fear"><strong>Sudden dread or fear</strong></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="substrate_context">9. Did any part of this happen through a screen, device, or online?</label>
+            <p class="sub-label">For example: moments when digital environments felt unexpectedly responsive or meaningful — a feed, message, or search result that seemed to be speaking to your exact situation. Describe if so.</p>
+            <textarea id="substrate_context" name="substrate_context" rows="3"></textarea>
+        </div>
+
+        <h3 class="form-section-heading">Part 3 — Your Account</h3>
+
+        <div class="form-group">
+            <label for="narrative">10. Please describe what happened in your own words. <span class="required">*</span></label>
+            <p class="sub-label">Focus on what you saw, heard, smelled, or felt. Don't worry about explaining it — just describe the event as it unfolded.</p>
+            <textarea id="narrative" name="narrative" rows="10" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="attribution">11. At the time, what did you think was happening?</label>
+            <p class="sub-label">Has your view changed since?</p>
+            <textarea id="attribution" name="attribution" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="narrative_frame_witness">12. How would you describe what this experience meant to you, if anything?</label>
+            <textarea id="narrative_frame_witness" name="narrative_frame_witness" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="cultural_context">13. Is there a tradition, story, or belief in your community that relates to what you experienced?</label>
+            <p class="sub-label">You don't have to fit your experience to a tradition — we're asking if one already comes to mind.</p>
+            <textarea id="cultural_context" name="cultural_context" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="community_context">14. Have other people you know had similar experiences, or have other strange things happened at this location?</label>
+            <p class="sub-label">If yes, how did you find out, and what did they experience?</p>
+            <textarea id="community_context" name="community_context" rows="3"></textarea>
+        </div>
+
+        <h3 class="form-section-heading">Part 4 — Contact & Consent</h3>
+
+        <div class="form-group">
+            <label for="contact_info">Contact Information <span class="optional-note">(optional)</span></label>
+            <p class="sub-label">For follow-up only. Never published. Skip if you prefer to remain fully anonymous.</p>
+            <input type="text" id="contact_info" name="contact_info" placeholder="Email or phone (optional)">
+        </div>
+
+        <div class="form-group consent-group">
+            <label>Data Permission Level <span class="required">*</span></label>
+            <p class="sub-label">How may we use your report?</p>
+
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="perm_publish" name="permission_level" value="PUBLISH_ANON" required>
+                    <label for="perm_publish" style="font-family: 'Courier New', monospace; font-size: 0.95rem; color: #333;">
+                        <strong style="color: var(--forest-green);">Option A — Public Archive (Recommended):</strong> I authorize APS to include my anonymous narrative in the public online registry so others can learn from it. All names and contact information are permanently redacted.
+                    </label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="perm_private" name="permission_level" value="PRIVATE_DATA">
+                    <label for="perm_private" style="font-family: 'Courier New', monospace; font-size: 0.95rem; color: #333;">
+                        <strong style="color: var(--forest-green);">Option B — Data Only:</strong> Use my report for internal analysis and mapping only. Do not publish my narrative text.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">SUBMIT TO REGISTRY</button>
+
+    </form>
+
+    <div id="status-message" role="status" aria-live="polite"></div>
+
+    <footer>
+        <p><strong>American Periphenomenal Survey | Cascadia Archive</strong><br>
+        Methodological Agnosticism Observed.<br><br>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="resources.html">Resources &amp; Support</a> |
+        <a href="credits.html">Mission &amp; Context</a> |
+        <a href="registry.html">Public Registry</a>
+        </p>
+    </footer>
+</div>
+
+<script>
+    // Apps Script Web App URL — update on each new deployment
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxEi-QgJ7hPmgJlZwuTeBFqCFV_245BC0TRBmuY6d2cWm5AAA_QwJl_pIDkUe5rwUbR/exec';
+
+    const form = document.forms['aps-form'];
+    const statusMsg = document.getElementById('status-message');
+    const submitBtn = form.querySelector('button.submit-btn');
+
+    function showStatus(text, kind) {
+        statusMsg.className = kind || '';
+        statusMsg.textContent = text;
+        statusMsg.style.display = 'block';
+    }
+
+    function hideStatus() {
+        statusMsg.style.display = 'none';
+        statusMsg.className = '';
+        statusMsg.textContent = '';
+    }
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        hideStatus();
+
+        // Client-side check for required fields. The server validates again.
+        const required = ['age_group', 'location_state', 'narrative', 'permission_level'];
+        const missing = required.filter(function(name) {
+            const el = form.elements[name];
+            if (!el) return true;
+            // Radio groups: check all inputs in the RadioNodeList
+            if (el.length !== undefined && typeof el.value === 'string' && el.value === '') return true;
+            return !el.value || String(el.value).trim() === '';
+        });
+
+        if (missing.length > 0) {
+            showStatus('Please complete all required fields before submitting.', 'error');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        showStatus('Transmitting to Cascadia Registry…', 'pending');
+
+        // The four extended-prompt responses are sent as their own fields and
+        // land in columns AL–AO: substrate_context, narrative_frame_witness,
+        // cultural_context, community_context. Each holds the witness's own
+        // wording; the analyst codes the structured fields (substrate,
+        // narrative_frame, cultural_frame_flag, witness_configuration) from them
+        // afterward, during triage.
+        //
+        // DO NOT merge these into `narrative`. That field is column U, which the
+        // public registry publishes. community_context asks the witness about
+        // other people's experiences — third parties who have not consented to
+        // publication. Keeping the responses in separate columns is what allows
+        // community_context (AO) to be withheld from every public export.
+        const fd = new FormData(form);
+
+        try {
+            const response = await fetch(scriptURL, {
+                method: 'POST',
+                body: fd,
+            });
+
+            // Apps Script always returns HTTP 200. Real status is in the JSON body.
+            let body;
+            try {
+                body = await response.json();
+            } catch (parseErr) {
+                throw new Error('Invalid server response');
+            }
+
+            if (body && body.result === 'success') {
+                const idSuffix = body.log_id ? ' (ref: ' + body.log_id + ')' : '';
+                showStatus('✅ Data logged. Thank you for your contribution to the Survey.' + idSuffix, 'success');
+                form.reset();
+            } else if (body && body.error === 'rate_limited') {
+                showStatus('You have submitted several reports recently. Please try again in an hour.', 'error');
+            } else if (body && body.error === 'missing_required_fields') {
+                const fields = (body.fields || []).join(', ');
+                showStatus('The server is missing required information: ' + fields + '. Please check and try again.', 'error');
+            } else {
+                showStatus('❌ Transmission error: the server could not record your report. Please try again in a few minutes.', 'error');
+                console.error('Server returned non-success:', body);
+            }
+        } catch (err) {
+            showStatus('❌ Connection error. Your report was not sent. Please check your connection and try again.', 'error');
+            console.error('Submission error:', err);
+        } finally {
+            submitBtn.disabled = false;
+        }
+    });
+</script>
+
+</body>
+</html>

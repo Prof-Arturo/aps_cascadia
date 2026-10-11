@@ -1,0 +1,259 @@
+═══════════════════════════════════════════════════════════════════════
+🗃️  APS INTERNAL ARCHIVE LOG — CASE FILE
+═══════════════════════════════════════════════════════════════════════
+Study:    The American Periphenomenal Survey
+Unit:     💾 Data Archive    |    Region: 🌲 Cascadia (Reg 10)
+Status:   CLASSIFIED / CONTAINS PII
+
+This template is the analyst's working scratchpad for active triage
+(Phase 2: Verification & Anonymization, and Phase 4: Analysis & Coding).
+Fill in during work. When the case is finalized into the Google Sheet,
+generate a paper cover sheet (APS_Archive_Case_File.docx) for the
+regional binder.
+
+Per the Master Data Protocol and Mission Statement §4.1: the APS does
+not debunk. analyst_notes records observations, not verdicts.
+═══════════════════════════════════════════════════════════════════════
+
+
+[ SECTION 1 — SYSTEM METADATA ]──────────────────────────────────────────
+
+  log_id:             CAS-____________________
+  timestamp:          ________-____-____  __:__:__
+  engagement_status:  [ ] PENDING       [ ] SPAM
+                      [ ] VERIFIED_WEB  [ ] REMOTE   [ ] FIELD
+  res_id (analyst):   _______________________
+
+  Triage opened:      ________-____-____  __:__:__
+  Triage closed:      ________-____-____  __:__:__
+
+
+[ SECTION 2 — SUBJECT PROFILE ]──────────────────────────────────────────
+                                                  (Review for PII)
+
+  age_group:         [ ] 18-25  [ ] 26-35  [ ] 36-45
+                     [ ] 46-55  [ ] 56-65  [ ] 66+
+  gender:            ____________________________________
+  occupation:        ____________________________________
+  cultural_bg:       ____________________________________
+                     (Self-described. Open text. Do not analyst-infer.)
+  contact_info:      ____________________________________
+                     (Email/phone. STRICTLY CONFIDENTIAL — do not publish.)
+  permission_level:  [ ] PUBLISH_ANON       [ ] PRIVATE_DATA
+
+
+[ SECTION 3 — EVENT CONTEXT ]────────────────────────────────────────────
+
+  location_state:    [ ] WA  [ ] OR  [ ] ID  [ ] BC
+                     [ ] AK_SE  [ ] NORCAL_JEFF  [ ] OTHER
+
+  location_specific: ___________________________________________________
+                     ___________________________________________________
+                     (Conventions per Field Manual §2.D: prefix
+                     "East-side:" for east of Cascade crest; spell out
+                     federal land names; preserve witness terminology.)
+
+  setting_type:      [ ] RES (Residential / Home)
+                     [ ] LIM (Liminal / Road / Transit)
+                     [ ] NAT (Wilderness / Forest)
+                     [ ] COM (Commercial / Industrial)
+
+  witness_status:    [ ] ALONE             [ ] WITNESS_1 (pair)
+                     [ ] WITNESS_GROUP (3+) [ ] UNCERTAIN
+
+  witness_config:    [ ] SOLO     (single witness)
+                     [ ] SHARED   (simultaneous multi-witness)
+                     [ ] COMMUNAL (propagating through community over time)
+                     [ ] UNCERTAIN
+                     (Distinct from witness_status — see Field Manual §8.1.
+                     COMMUNAL requires an explicit probe; if not probed,
+                     code as UNCERTAIN, not inferred.)
+
+
+[ SECTION 4 — ENVIRONMENT & PHENOMENOLOGY ]──────────────────────────────
+
+  env_weather:       [ ] CLEAR  [ ] RAIN  [ ] STORM  [ ] FOG
+                     [ ] OZ (artificial silence / Oz Factor active)
+
+  env_noise:         [ ] SILENT (total)     [ ] HUM (vibration)
+                     [ ] TRAFFIC            [ ] NATURE
+
+  Phenomenology flags (high-strangeness markers):
+  [ ] oz_factor_flag    (Unnatural silence OR felt alteration of
+                         sensory field. Cross-type marker — flag
+                         independently of primary or secondary type.)
+  [ ] phenom_hum        (Low-freq vibration, diesel-idle sound)
+  [ ] phenom_time       (Missing time or time distortion)
+  [ ] phenom_nausea     (Somatic — headache, vertigo, vomiting)
+  [ ] phenom_paralysis  (Inability to move voluntary muscles)
+  [ ] phenom_tech       (Hardware failure — drain, glitch, malfunction)
+  [ ] phenom_ozone      (Olfactory — sulfur, ozone, wet-dog smell)
+  [ ] phenom_fear       (Acute irrational dread / scopophobia)
+
+
+[ SECTION 5 — NARRATIVE & OBSERVATION ]──────────────────────────────────
+
+  Field-observed only (Tier 2/3 cases; leave blank for web-only):
+
+  obs_demeanor:      [ ] CALM       [ ] AGITATED
+                     [ ] INTENSE    [ ] SKEPTICAL
+
+  obs_delivery:      [ ] FLUID      [ ] FRAGMENTED
+                     [ ] REHEARSED  [ ] PRESSURED
+
+
+  NARRATIVE TRANSCRIPT (post-Privacy-Scrub):
+  ─────────────────────────────────────────────────────────────────────
+  Paste the witness narrative here. Apply the Privacy Scrub Protocol
+  per Operations Manual Phase 2: remove all personally identifiable
+  information. Real names → [REDACTED]. Specific addresses → generic
+  ("the house," "the road"). Employer names → [REDACTED]. Phone
+  numbers and email addresses → [REDACTED]. License plates → [REDACTED].
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+
+  ATTRIBUTION (witness's own theory):
+  ─────────────────────────────────────────────────────────────────────
+  Captured verbatim from the witness — "What do YOU think it was?"
+  Preserve their framing exactly. Do not translate. Do not paraphrase.
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+
+[ SECTION 6 — ANALYST CODING ]───────────────────────────────────────────
+
+  primary_type (exactly one — the dominant or initiating phenomenon):
+
+  [ ] TYPE_I    Liminal — spatial distortion, missing time, threshold
+                crossings; digital-substrate cases coded here
+  [ ] TYPE_II   Crypto-Bio — unknown biological entities w/ physical
+                presence
+  [ ] TYPE_III  Aerial/Tech — UAP, anomalous lights, structured craft,
+                hardware failure
+  [ ] TYPE_IV   Noetic/Psychic — anomalous dreams, telepathy,
+                interior Hum
+  [ ] TYPE_V    Material/Poltergeist — physical interaction w/ environment
+  [ ] TYPE_VI   Entity/Threshold — non-biological entity contact
+  [ ] TYPE_VII  Place/Genius Loci — persistent properties of locations
+  [ ] TYPE_VIII Energetic/Environmental — diffuse phenomena, exterior Hum
+  [ ] TYPE_IX   Cultural/Cosmological — witness's cultural framing
+                analytically primary; requires sensitivity protocol
+
+  secondary_types (any number — co-occurring phenomena, pipe-delimited):
+
+  [ ] I   [ ] II   [ ] III  [ ] IV   [ ] V
+  [ ] VI  [ ] VII  [ ] VIII [ ] IX
+  Final string: _________________________________________________________
+                 (e.g., TYPE_II|TYPE_VIII)
+
+  substrate:         [ ] ANALOG    (embodied / environmental)
+                     [ ] DIGITAL   (feed / device / algorithmic mediation)
+                     [ ] HYBRID    (both active or coupled)
+                     [ ] UNCERTAIN
+
+  narrative_frame (how the witness characterizes the shape of the
+  experience — researcher-coded from account; multi-select permitted):
+
+  [ ] WARNING    (\"It was telling me to leave / pay attention\")
+  [ ] GIFT       (\"It was given to me / meant to receive\")
+  [ ] TEST       (\"It was checking me\")
+  [ ] INTRUSION  (\"It came at me / wasn't supposed to be there\")
+  [ ] CALLING    (\"It was for me / selecting me\")
+  [ ] ENCOUNTER  (\"I met something / mutual recognition\")
+  [ ] VISITATION (\"They came to see me\")
+  [ ] OTHER:     ______________________________________________________
+  Final string:  ______________________________________________________
+                 (e.g., WARNING|ENCOUNTER)
+
+  cultural_frame_flag: [ ] YES — witness framed within a specific
+                       cultural / indigenous / religious / cosmological
+                       system; triggers Type IX handling
+
+  Type IX sensitivity flag: [ ] YES — case requires sensitivity-protocol
+                       consultation; held in REMOTE until consultation
+                       infrastructure for the relevant tradition is in
+                       place. Do not force interpretive coding.
+
+
+[ SECTION 7 — INDIGENOUS TERRITORY ]─────────────────────────────────────
+
+  Witness self-identification (verbatim from intercept, if recorded):
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+  native-land.ca lookup (analyst, during triage):
+  Coordinates / place name used: ______________________________________
+  Territories returned by lookup: ______________________________________
+  ______________________________________________________________________
+
+  Witness framing precedence applied? [ ] YES  [ ] N/A
+  (If witness framing conflicts with geographic lookup, witness wins.)
+
+  Final indigenous_territory value (pipe-delimited):
+  _____________________________________________________________________
+  _____________________________________________________________________
+
+  [ ] UNKNOWN  — analyst could not determine
+  [ ] NOT_RECORDED — no lookup attempted
+
+
+[ SECTION 8 — ANALYST NOTES ]────────────────────────────────────────────
+
+  Internal analytical comments. Per Master Data Protocol: record
+  observations (source issues, internal inconsistencies, prior reporting
+  history) as specific notes, not verdicts. Methodological agnosticism
+  applies — do not write debunking conclusions here.
+
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+
+[ SECTION 9 — DISPOSITION ]──────────────────────────────────────────────
+
+  [ ] ARCHIVE        Case complete, fully coded, finalized to Google
+                     Sheet. Filed to regional binder if Tier 3 / Type
+                     VII / Type IX.
+
+  [ ] REMOTE         Case held pending consultation (Type IX) or
+                     pending further witness contact. Not finalized.
+
+  [ ] SPAM           Discard (engagement_status = SPAM). Row remains
+                     in archive for audit purposes but never appears
+                     in any view.
+
+  Reason for disposition (if REMOTE or SPAM):
+  ______________________________________________________________________
+  ______________________________________________________________________
+
+
+[ SECTION 10 — SIGN-OFF ]────────────────────────────────────────────────
+
+  Analyst signature: ___________________________________
+  Date:              ________-____-________
+  Finalized to Google Sheet (row #):  __________
+  Paper cover sheet generated?        [ ] YES  [ ] N/A
+  Filed to regional binder?           [ ] YES  [ ] N/A — sector tab: ____
+
+
+═══════════════════════════════════════════════════════════════════════
+PROPERTY OF APS ADMINISTRATION    |    💾 Data Archive    |    Region 10
+Methodological Agnosticism Observed.  Universal Type Collection Across All Regions.
+═══════════════════════════════════════════════════════════════════════

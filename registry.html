@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APS Cascadia | Public Registry</title>
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <style>
+        /* --- ACADEMIC / FEDERAL STYLING --- */
+        @font-face {
+            font-family: 'NationalPark';
+            src: url('media/NationalPark-VariableVF.ttf') format('truetype');
+            font-weight: normal;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --accent: #2c4a34; /* Forest Service Green */
+            --bg: #f4f4f0;     /* Old Paper */
+            --highlight: #e0e0d8;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        header {
+            border-bottom: 4px double var(--primary);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'NationalPark', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .sub-head {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* SEARCH BAR */
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            border: 2px solid var(--primary);
+            background: #fff;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        /* DATA TABLE */
+        .registry-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border: 1px solid var(--primary);
+            background: #fff;
+        }
+
+        .registry-table th {
+            font-family: 'NationalPark', sans-serif;
+            background-color: var(--primary);
+            color: #fff;
+            text-align: left;
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        .registry-table td {
+            border-bottom: 1px solid #ccc;
+            padding: 12px 10px;
+            vertical-align: top;
+        }
+
+        .registry-table tr:hover {
+            background-color: var(--highlight);
+        }
+
+        /* COLUMN STYLES */
+        .col-id { font-family: 'Courier New', monospace; font-weight: bold; width: 100px; color: var(--accent); }
+        .col-date { font-family: 'Courier New', monospace; width: 90px; }
+        .col-loc { font-weight: bold; width: 160px; }
+        
+        .col-type { 
+            width: 60px; 
+            text-align: center; 
+            font-size: 1.4rem; 
+            cursor: help;
+        }
+        
+        .col-narrative { } 
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-family: 'Courier New', monospace;
+            font-style: italic;
+        }
+
+        /* LEGEND TABLE STYLING */
+        .legend-container {
+            margin-top: 40px;
+            border: 2px solid var(--primary);
+            background: #fff;
+            padding: 15px;
+        }
+
+        .legend-title {
+            font-family: 'NationalPark', sans-serif;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--primary);
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .legend-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .legend-table td {
+            padding: 5px;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .legend-glyph {
+            font-size: 1.5rem;
+            text-align: center;
+            width: 50px;
+        }
+
+        .legend-code {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: var(--accent);
+            width: 120px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .col-date, .col-id { display: block; width: 100%; }
+            .registry-table th { display: none; }
+            .registry-table td { display: block; border: none; padding: 2px 10px; }
+            .registry-table tr { border-bottom: 1px solid #000; padding: 10px 0; display: block; }
+            .col-loc { margin-top: 5px; color: var(--accent); }
+            .col-type { text-align: left; margin-bottom: 5px; } 
+            .col-narrative { padding-bottom: 15px; }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Cascadia Registry</h1>
+        <div class="sub-head">PUBLIC ARCHIVE | REGION 10 | VERIFIED DATA LOG</div>
+    </header>
+
+    <input type="text" id="searchInput" class="search-box" placeholder="Search Database... (Filter by keyword, location, or ID)" onkeyup="filterTable()">
+
+    <table class="registry-table" id="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th style="text-align: center;">Type</th>
+                <th>Narrative</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td colspan="5" class="loading">Connecting to Secure Server...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="legend-container">
+        <div class="legend-title">Classification Key (Periphenomena)</div>
+        <table class="legend-table">
+            <tr>
+                <td class="legend-glyph">🚪</td>
+                <td class="legend-code">TYPE I</td>
+                <td><strong>LIMINAL</strong></td>
+                <td>Spatial distortions, missing time, threshold crossings, places that don't quite fit. Digital-substrate cases (feeds or devices behaving as though responsive to thought) also fall here.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">🐾</td>
+                <td class="legend-code">TYPE II</td>
+                <td><strong>CRYPTO-BIOLOGICAL</strong></td>
+                <td>Encounter with an unknown biological entity. Tracks, vocalizations, behavior. Distinguished from Type VI by physical evidence.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">🛸</td>
+                <td class="legend-code">TYPE III</td>
+                <td><strong>AERIAL / TECHNICAL</strong></td>
+                <td>Lights in the sky, structured craft, drone-like behavior, mechanical or hardware failure.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">🛌</td>
+                <td class="legend-code">TYPE IV</td>
+                <td><strong>NOETIC / PSYCHIC</strong></td>
+                <td>Interior experiences — anomalous dreams, premonitions, telepathic impressions, knowing things you shouldn't.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">🪑</td>
+                <td class="legend-code">TYPE V</td>
+                <td><strong>POLTERGEIST / MATERIAL</strong></td>
+                <td>Physical interaction with the environment — objects moving, knocks, apports, marks or traces.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">👁</td>
+                <td class="legend-code">TYPE VI</td>
+                <td><strong>ENTITY / THRESHOLD</strong></td>
+                <td>Non-biological entity contact — figures seen at the edge of sleep or in full waking consciousness, ancestral visitation, shadow figures, what folklore calls "the seen."</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">🗺️</td>
+                <td class="legend-code">TYPE VII</td>
+                <td><strong>PLACE / GENIUS LOCI</strong></td>
+                <td>Locations with persistent unusual reports across many witnesses over time. Window areas, sacred sites, places with multi-generational histories.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">⚡</td>
+                <td class="legend-code">TYPE VIII</td>
+                <td><strong>ENERGETIC / ENVIRONMENTAL</strong></td>
+                <td>Diffuse phenomena without an identified source — the Hum, infrasound, electromagnetic anomalies, persistent geophysical strangeness.</td>
+            </tr>
+            <tr>
+                <td class="legend-glyph">🌌</td>
+                <td class="legend-code">TYPE IX</td>
+                <td><strong>CULTURAL / COSMOLOGICAL</strong></td>
+                <td>Experiences explicitly framed within a specific cultural, indigenous, religious, or spiritual tradition. The witness's own framework is preserved as primary.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin-top: 40px; border-top: 1px solid #000; padding-top: 10px; font-size: 0.8rem; text-align: center; opacity: 0.7;">
+        APS Administration | Region 10 (🌲Cascadia)<br>
+        <em>All entries anonymized per privacy protocol.</em><br>
+        <a href="index.html" style="color: var(--primary); text-decoration: none;">[ Submit New Report ]</a> | 
+        <a href="privacy.html" style="color: var(--primary); text-decoration: none;">[ Privacy Policy ]</a>
+    </div>
+</div>
+
+<script>
+    // --- CONFIGURATION ---
+    const sheet_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRpL2q_JAf_vIdWYrbN3hQ8Bypm0ihsOT5BWYOXnnbA1GYjXOV_Ftk9YRSKXJBnv7hgduSjHWMIeWoG/pub?gid=1871137459&single=true&output=csv'; 
+
+    // --- GLYPH MAPPER ---
+    // Maps the primary_type code from the sheet to the public-facing glyph and label.
+    // NOTE: The Google Sheet QUERY behind this page must select the primary_type column
+    // (column AA in the v4.1 canonical layout). The deprecated class_code column (AD) is
+    // not populated on new rows. If you see ❓ glyphs in the registry, the QUERY is
+    // likely still pointing at class_code instead of primary_type.
+    //
+    // Expected PUBLIC_VIEW query (canonical layout):
+    //   SELECT A, B, I, AA, U WHERE Z = 'PUBLISH_ANON' AND C = 'VERIFIED_WEB'
+    //   -> timestamp, log_id, location_specific, primary_type, narrative
+    const typeMap = {
+        'TYPE_I':    { glyph: '🚪',  title: 'TYPE I — LIMINAL' },
+        'TYPE_II':   { glyph: '🐾',  title: 'TYPE II — CRYPTO-BIOLOGICAL' },
+        'TYPE_III':  { glyph: '🛸',  title: 'TYPE III — AERIAL / TECHNICAL' },
+        'TYPE_IV':   { glyph: '🛌',  title: 'TYPE IV — NOETIC / PSYCHIC' },
+        'TYPE_V':    { glyph: '🪑',  title: 'TYPE V — POLTERGEIST / MATERIAL' },
+        'TYPE_VI':   { glyph: '👁',  title: 'TYPE VI — ENTITY / THRESHOLD' },
+        'TYPE_VII':  { glyph: '🗺️',  title: 'TYPE VII — PLACE / GENIUS LOCI' },
+        'TYPE_VIII': { glyph: '⚡',  title: 'TYPE VIII — ENERGETIC / ENVIRONMENTAL' },
+        'TYPE_IX':   { glyph: '🌌',  title: 'TYPE IX — CULTURAL / COSMOLOGICAL' },
+        'UNK':       { glyph: '❓',  title: 'UNCATEGORIZED' }
+    };
+
+    // --- LOGIC ---
+    async function fetchRegistry() {
+        try {
+            const response = await fetch(sheet_csv_url);
+            const data = await response.text();
+            
+            // ROBUST CSV PARSER
+            const rows = parseCSV(data);
+            
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = ''; 
+
+            // Skip Header Row (Index 0)
+            for (let i = 1; i < rows.length; i++) {
+                const cols = rows[i];
+                
+                // Expecting 5 cols from the QUERY: A, B, I, AA, U
+                // Requires all five — a short row would render "undefined" in the table.
+                if (cols.length >= 5) { 
+                    const tr = document.createElement('tr');
+                    
+                    const date = (cols[0] || '').split(' ')[0]; 
+                    const id = cols[1] || '';
+                    const loc = cols[2] || ''; 
+                    const rawType = cols[3] ? cols[3].trim() : "UNK"; 
+                    const narrative = cols[4] || '';
+                    
+                    // DEBUG: If you see Question Marks, check the Console (F12) to see what raw data is being pulled.
+                    if (!typeMap[rawType]) {
+                        console.warn("Unknown Type Code Found:", rawType);
+                    }
+
+                    // Get Glyph Data (Fall back to UNK if match fails)
+                    const typeData = typeMap[rawType] || typeMap['UNK'];
+
+                    // SECURITY: every value below originates in a witness submission.
+                    // Interpolating it raw into innerHTML would execute any markup it
+                    // contains in the browser of everyone viewing the public registry.
+                    // escapeHtml() renders it as text instead. Do not remove.
+                    tr.innerHTML = `
+                        <td class="col-id">${escapeHtml(id)}</td>
+                        <td class="col-date">${escapeHtml(date)}</td>
+                        <td class="col-loc">${escapeHtml(loc)}</td>
+                        <td class="col-type" title="${typeData.title}">${typeData.glyph}</td>
+                        <td class="col-narrative">${escapeHtml(narrative)}</td>
+                    `;
+                    tableBody.appendChild(tr);
+                }
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('tableBody').innerHTML = '<tr><td colspan="5" class="loading">Error loading archive. System offline.</td></tr>';
+        }
+    }
+
+    // --- HELPER: HTML ESCAPING ---
+    // Witness narratives are published verbatim by design (Grimm Protocol /
+    // linguistic fidelity). That means the registry must treat them as text,
+    // never as markup. The ampersand replacement must come first, or it would
+    // double-escape the entities produced by the replacements after it.
+    function escapeHtml(value) {
+        return String(value == null ? '' : value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    // --- HELPER: CSV PARSER ---
+    function parseCSV(str) {
+        const arr = [];
+        let quote = false;  
+        let row = 0, col = 0, c = 0;
+
+        for (; c < str.length; c++) {
+            let cc = str[c], nc = str[c + 1];        
+            arr[row] = arr[row] || [];              
+            arr[row][col] = arr[row][col] || '';    
+
+            if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; } 
+            if (cc == '"') { quote = !quote; continue; }
+            if (cc == ',' && !quote) { ++col; continue; }
+            if (cc == '\r' && nc == '\n' && !quote) { ++row; col = 0; ++c; continue; }
+            if (cc == '\n' && !quote) { ++row; col = 0; continue; }
+            if (cc == '\r' && !quote) { ++row; col = 0; continue; }
+
+            arr[row][col] += cc;
+        }
+        return arr;
+    }
+
+    // --- SEARCH FILTER ---
+    function filterTable() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toUpperCase();
+        const table = document.getElementById("dataTable");
+        const tr = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < tr.length; i++) { 
+            let text = tr[i].textContent || tr[i].innerText;
+            if (text.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+
+    fetchRegistry();
+</script>
+</body>
+</html>

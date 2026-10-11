@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+<rect width="1200" height="1200" fill="#FFFFFF"/>
+<line x1="60" y1="80" x2="1140" y2="80" stroke="#29431F" stroke-width="5"/>
+<text x="600" y="175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#29431F">DO YOU HEAR OR FEEL SOMETHING</text>
+<text x="600" y="235" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="bold" fill="#29431F">NO ONE ELSE DOES?</text>
+<text x="600" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="normal" fill="#222222">The American Periphenomenal Survey (APS) is documenting</text>
+<text x="600" y="354" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="normal" fill="#222222">anomalous energetic and environmental phenomena</text>
+<text x="600" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="normal" fill="#222222">across the Cascadia Bioregion.</text>
+<text x="600" y="446" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="normal" fill="#222222">We are collecting stories of:</text>
+<circle cx="120" cy="482" r="5" fill="#29431F"/>
+<text x="155" y="490" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#222222"><tspan font-weight="bold">The Hum</tspan><tspan font-weight="normal"> — a persistent low-frequency sound others may not hear</tspan></text>
+<circle cx="120" cy="526" r="5" fill="#29431F"/>
+<text x="155" y="534" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#222222"><tspan font-weight="bold">Pressure or presence in the air</tspan><tspan font-weight="normal"> — a felt heaviness without visible source</tspan></text>
+<circle cx="120" cy="570" r="5" fill="#29431F"/>
+<text x="155" y="578" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#222222"><tspan font-weight="bold">Unexplained lights</tspan><tspan font-weight="normal"> — over land, water, or sky, without known source</tspan></text>
+<circle cx="120" cy="614" r="5" fill="#29431F"/>
+<text x="155" y="622" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#222222"><tspan font-weight="bold">Electromagnetic strangeness</tspan><tspan font-weight="normal"> — electronics failing in a repeatable location</tspan></text>
+<circle cx="120" cy="658" r="5" fill="#29431F"/>
+<text x="155" y="666" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#222222"><tspan font-weight="bold">Temperature or air anomalies</tspan><tspan font-weight="normal"> — cold or warm zones, felt but not explained</tspan></text>
+<text x="600" y="758" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="normal" font-style="italic" fill="#222222">What you are noticing may not be visible.</text>
+<text x="600" y="798" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" font-style="italic" fill="#29431F">We do not judge. We document.</text>
+<text x="600" y="858" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#29431F">CONTRIBUTE TO THE REGISTRY</text>
+<text x="600" y="902" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="bold" fill="#29431F">aps-project.org</text>
+<line x1="60" y1="1110" x2="1140" y2="1110" stroke="#29431F" stroke-width="5"/>
+<text x="600" y="1150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#666666">American Periphenomenal Survey  |  Region 10 (🌲 Cascadia)</text>
+<text x="600" y="1175" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" fill="#666666">Methodological Agnosticism Observed</text>
+</svg>
