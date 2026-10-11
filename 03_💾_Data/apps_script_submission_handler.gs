@@ -5,10 +5,23 @@
  * Receives POSTs from index.html and writes them to the Cascadia Log.
  *
  * Changes from the previous version are marked [FIX] with rationale.
- * Deploy: Extensions → Apps Script → paste → Deploy → New deployment →
- *         Web app → Execute as "Me", Access "Anyone".
- *         A NEW deployment (not "Manage deployments") is required for the
- *         URL to serve updated code.
+ * FIRST deployment: Extensions → Apps Script → paste → Deploy →
+ *   New deployment → Web app → Execute as "Me", Access "Anyone".
+ *   This issues a URL. Put it in index.html (const scriptURL).
+ *
+ * UPDATING afterward: Deploy → Manage deployments → pencil icon →
+ *   Version: "New version" → Deploy. The URL stays the same, so index.html
+ *   needs no change. Saving the editor alone does NOT update the live web
+ *   app — the URL keeps serving the last deployed version.
+ *
+ * Note: "New deployment" creates a SEPARATE deployment with a DIFFERENT URL,
+ *   and the old one keeps running old code. Use it only for the first deploy
+ *   or when you deliberately want a second endpoint.
+ *
+ * The script writes to whichever spreadsheet it is BOUND to
+ * (SpreadsheetApp.getActiveSpreadsheet). Opening Apps Script from the sheet
+ * itself is what establishes that binding — a script bound to an old copy
+ * will silently write into the old copy.
  */
 
 // ---------------------------------------------------------------------------
