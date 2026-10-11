@@ -23,7 +23,7 @@ All items below are set to **Restricted** sharing — visible only to named acco
 
 | Item | What it holds | Link |
 |---|---|---|
-| **Cascadia Log (live)** | The working submission database. New reports write here via the Apps Script handler. | [[APS_Cascadia_Log_4.1](https://docs.google.com/spreadsheets/d/1voHVcjmr30NeXa1N3KVv0AmMeLQJUlmP1RXcnzB2iA0/edit?usp=drive_link)] |
+| **Cascadia Log (live)** | The working submission database. New reports write here via the Apps Script handler. | [[APS_Cascadia_Log_4.1](https://docs.google.com/spreadsheets/d/1voHVcjmr30NeXa1N3KVv0AmMeLQJUlmP1RXcnzB2iA0/edit?gid=614011592#gid=614011592)] |
 | **Archive case files** | Coded case records produced during analyst triage. One file per case (`CASE-XXXXX`). | [[🗂️_Case Files](https://drive.google.com/drive/folders/1GVrpzsgjTsqMi0639T9LoeNjCcc-rDwr?usp=drive_link)] |
 | **CSV snapshots** | Redacted exports for analytical review. Contact info removed, narratives redacted before export. | [[🗃️_CSV Snapshots](https://drive.google.com/drive/folders/1nMlXCQUoQVVADiq7OQrkbuc1OoM6q21x?usp=drive_link)] |
 | **Pre-anonymization narratives** | Original accounts retained for `PRIVATE_DATA` cases and for `PUBLISH_ANON` cases awaiting analyst redaction. | [PASTE DRIVE URL] |
