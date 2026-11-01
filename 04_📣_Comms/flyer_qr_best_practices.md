@@ -2,10 +2,11 @@
 
 **Study:** The American Periphenomenal Survey
 **Unit:** 📣 Communications  ·  **Scope:** National — applies to all print outreach
-**Status:** ACTIVE REFERENCE  ·  **Version:** 1.1
+**Status:** ACTIVE REFERENCE  ·  **Version:** 1.2
+**v1.2 changes (1 Nov):** §9.1, §9.3 and §9.4 rewritten — Helvetica Neue replaced by Inter throughout, with the optical-size family-naming trap recorded. §3.3 added on QR aspect distortion; §9.5 added on the phantom second page.
 **v1.1 changes:** §3.2 corrected — the v1.0 "destination mismatch" finding was wrong and is withdrawn. §4.4, §6 and §7 updated to record the decisions taken and the v4.0 build.
-**Location:** `04_📣_Comms/outreach/`
-**Applies to:** `APS_Recruitment_Flyer_General.docx` (v3.5) and the four type-family print flyers
+**Location:** `04_📣_Comms/`
+**Applies to:** `APS_Recruitment_Flyer_General.docx` (v4.0) and the four type-family print flyers
 **Created:** 25 October 2026
 
 ---
@@ -275,14 +276,14 @@ If v4.0 adopts tear-offs, the type flyers should get them too, and their tabs sh
 
 ## 9 · Typography and print production
 
-Added in v1.1, when National Park and Helvetica Neue were adopted for the flyer program.
+Added in v1.1 when National Park and Helvetica Neue were adopted. **Updated 1 November: Helvetica Neue replaced by Inter throughout** — see §9.3 for why that is an improvement and not merely a substitution.
 
 ### 9.1 · Exact font strings
 
 | Role | String to use in Word | Notes |
 |---|---|---|
-| Titles, headings, display | `National Park` | See the defect below |
-| Body, captions, tear-off tabs | `Helvetica Neue` | **With the space.** The PostScript name `HelveticaNeue` will not resolve. |
+| Titles, headings, display | `National Park` | See the defect in §9.2 |
+| Body, captions, tear-off tabs | `Inter 18pt` | **Not** `Inter`. See §9.3 — the static cuts install as optical-size families. |
 
 ### 9.2 · The National Park font has a broken name table
 
@@ -301,20 +302,36 @@ I tested both. The synthesized bold is usable but visibly muddier than the real 
 
 **Embedding is permitted.** `fsType = 8` (editable embedding), so embedding National Park in PDFs and documents is within licence.
 
-### 9.3 · Helvetica Neue will not survive leaving your Mac
+### 9.3 · Inter replaced Helvetica Neue — and name it `Inter 18pt`, not `Inter`
 
-Helvetica Neue ships with macOS and is **not present on Windows**. A `.docx` opened on a Windows machine substitutes it, the text reflows, and the one-page fit and tear-off alignment are the first casualties.
+**Why the change was worth making.** Helvetica Neue is a commercial Monotype face that ships with macOS. Using it was fine; *distributing* it was not, and it had turned up in the public repository. It is also absent from Windows, so a `.docx` sent to a café or partner substituted it live and reflowed — with the one-page fit and the tear-off strip the first casualties.
 
-This is not hypothetical for this flyer — it is a document designed to be handed to cafés, trailhead kiosks and partner venues, any of which may print it themselves.
+Inter removes both problems at once. It is under the **SIL Open Font License**, so it can ship in the repository and be installed by anyone who receives the file. It is a neo-grotesque in the same tradition, it sits well beside National Park, and the project now owns its whole type stack outright.
+
+**The catch, which is the same shape as §9.2.** Inter's variable font carries an **optical-size axis**, so its static instances cannot all share one family name. Google Fonts packages them as three families — `Inter 18pt`, `Inter 24pt`, `Inter 28pt` — each with nine weights in roman and italic.
+
+**A document that asks for plain `Inter` may match nothing and substitute silently.** That is precisely the National Park failure arriving by a different road: invisible, and it looks like a design choice rather than an error.
+
+**Confirm the exact string in Word's font menu before trusting it**, the way National Park's names were read from the TTF name table rather than assumed. If a bare `Inter` family does appear, it is the *variable* font, and selecting it reintroduces the synthesized-bold problem the static cuts were added to solve.
+
+**Use `Inter 18pt` for this flyer.** Body text runs 10–11.5 pt, and the lower optical size is drawn for small text — more open spacing, subtly different proportions. The 24pt and 28pt cuts are for display, and the flyer's display type is National Park, so one Inter family is sufficient.
+
+Keep the variable files regardless. They remain the better choice for the **website**, where a single file covers every weight and the optical-size axis adjusts continuously. Statics are for Word; variables are for the web.
 
 ### 9.4 · Distribute the PDF, not the .docx
 
-Which follows from 9.2 and 9.3 together:
+Still the rule, though Inter changes the reasoning behind it.
+
+The old argument was availability: Helvetica Neue simply did not exist on a recipient's Windows machine. That is gone — Inter is free, and anyone can install it from the repository.
+
+The argument that remains is simpler and harder to fix: **a café will not install two fonts to print your flyer.** Neither will a trailhead kiosk or a partner's office manager. Send a `.docx` and you are asking a stranger to do typographic setup before your layout survives.
 
 - **`.docx` = your editable master.** Keep it, edit it, never send it to a venue.
-- **PDF = what goes to boards, venues and partners.** It embeds both faces, locks the layout, and prints identically on any machine.
+- **PDF = what goes to boards, venues and partners.** It embeds both faces, locks the layout, and prints identically everywhere with nothing installed.
 
-**Export the PDF from Word on your own Mac**, where both fonts are installed, rather than using any PDF generated elsewhere — a PDF made on a machine lacking Helvetica Neue has a substituted face baked into it permanently, which is worse than a `.docx` that at least substitutes live.
+**Export the PDF from Word on your own Mac**, where both families are present. A PDF generated on a machine missing either face bakes the substitution in permanently, which is worse than a `.docx` that at least substitutes live and visibly.
+
+Both faces now permit embedding: National Park at `fsType 8`, Inter under the OFL. Nothing blocks a correctly embedded PDF.
 
 The same rule should govern the four type-family flyers.
 
