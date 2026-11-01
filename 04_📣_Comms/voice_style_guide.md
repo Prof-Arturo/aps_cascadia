@@ -50,7 +50,7 @@ We do not use the language of paranormal investigation. We do not use the langua
 |---|---|---|
 | *Paranormal* | *Anomalous* / *high-strangeness* | Paranormal implies occult causation; we make no such claim |
 | *Supernatural* | *Anomalous* / *unexplained* | Supernatural claims transcendence of nature; we don't |
-| *Ghost hunter*, *investigator* | *Researcher*, *cartographer of the unknown* | We do not hunt; we document |
+| *Ghost hunter*, *investigator* | *Researcher*, *surveyor of the unknown* | We do not hunt; we document |
 | *Believer* / *skeptic* | *Witness*, *reader*, *researcher* | Both framings are ontological commitments we avoid |
 | *Subject*, *respondent*, *experiencer* | *Witness* | The person is a witness to their own experience |
 | *Case* (in outreach) | *Story*, *account*, *report* | "Case" reads clinical; the person shared a story |
@@ -266,7 +266,7 @@ Developed through use; now function as project identity markers. Used deliberate
 
 | Tagline | Where It Belongs | Notes |
 |---|---|---|
-| *"We are not ghost hunters. We are cartographers of the unknown."* | Public outreach, top of flyers | Sets the register in the first sentence a reader encounters |
+| *"We are not ghost hunters. We are surveyors of the unknown."* | Public outreach, top of flyers | Sets the register in the first sentence a reader encounters |
 | *"We do not judge. We document."* | Public outreach, closing lines | The methodological principle in plain language |
 | *"Your data helps build the map."* | Recruitment Flyer | Frames contribution as collective without overpromising |
 | *"Methodological Agnosticism Observed."* | Footer of internal reference documents | Signals to internal readers that the foundational principle is in force |
@@ -288,12 +288,20 @@ The reference documents contain phrases that carry conceptual weight and should 
 - *"personified compression algorithms"*
 - *"psyche-world resonance, mechanized and operating without ritual containment"*
 - *"the form of the telling is data"*
-- *"cartographers of the unknown"*
+- *"surveyors of the unknown"*
 - *"the mythic infrastructure of collective meaning"*
 - *"the witness's own framework is preserved as primary data"*
 - *"a place where strange stories are taken seriously enough to be preserved, structured, and eventually told"*
 
 When quoted or excerpted in derivative materials (grant applications, press summaries, academic engagement), these phrases appear **intact or not at all**. Paraphrase risks slippage into the paranormal-investigation register.
+
+### Revision record
+
+**1 November 2026 — *cartographers* → *surveyors of the unknown*.** Changed by the Principal Investigator across all project materials: this section, §3's terminology table, §9's tagline register, `APS_Elevator_Pitches.md`, `README.md`, and the General Recruitment Flyer.
+
+The new wording echoes the project's own name, which the original did not. Recorded here because this section binds a phrase to appear *intact or not at all*, so a change to one is a deliberate revision of the standard rather than the drift this section exists to prevent — and a future reader finding *cartographers* in an older document should know which way the supersession runs.
+
+**Anything still carrying the old wording is out of date, not an alternative.** Nothing in the repository does as of this entry; printed flyers already posted do, and need no recall.
 
 ---
 

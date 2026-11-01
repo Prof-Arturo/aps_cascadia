@@ -52,11 +52,11 @@ The thing that goes wrong in live conversation is drift: a question gets asked i
 
 > There's a category of experience that almost everyone has brushed against and almost nobody reports. We're building the archive for it in the Pacific Northwest.
 >
-> What makes it unusual is the discipline: we don't decide what the experience was. If a witness says skinwalker, the record says skinwalker. If they say glitch in the Matrix, the record says that. Their framing is the data, not an error to correct. We're cartographers of the unknown, not ghost hunters.
+> What makes it unusual is the discipline: we don't decide what the experience was. If a witness says skinwalker, the record says skinwalker. If they say glitch in the Matrix, the record says that. Their framing is the data, not an error to correct. We're surveyors of the unknown, not ghost hunters.
 
 **Why it works:** gives the hook in the first sentence so the interviewer doesn't have to hunt for one, then immediately supplies the discipline. The two concrete examples — one indigenous-framed, one internet-native — demonstrate the range without editorializing about either.
 
-**Watch for:** a journalist who paraphrases "cartographers of the unknown." Paraphrased taglines drift toward the paranormal-investigation register. Ask for it quoted verbatim or omitted.
+**Watch for:** a journalist who paraphrases "surveyors of the unknown." Paraphrased taglines drift toward the paranormal-investigation register. Ask for it quoted verbatim or omitted.
 
 ---
 
